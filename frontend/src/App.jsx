@@ -1,16 +1,17 @@
+import HomePage from "./pages/HomePage";
+import React from "react";
+
 import "./App.css";
-import Footer from "./components/Footer";
-import Header from "./components/Header";
-import Policy from "./components/Policy";
+// import ContactPage from "./pages/ContactPage";
+// import ShopPage from "./pages/ShopPage";
 
 function App() {
   return (
-    <div>
-      <Header />
-      <h1>Hello</h1>
-      <Policy />
-      <Footer />
-    </div>
+    <React.Fragment>
+      <HomePage />
+      {/* <ContactPage /> */}
+      {/* <ShopPage /> */}
+    </React.Fragment>
   );
 }
 
