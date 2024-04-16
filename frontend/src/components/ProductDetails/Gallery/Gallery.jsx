@@ -91,7 +91,7 @@ const Gallery = () => {
 };
 
 export default Gallery;
-Gallery.prototypes = {
+Gallery.propTypes = {
   activeImg: PropTypes.string,
   setActiveImg: PropTypes.string,
 };
