@@ -1,9 +1,10 @@
 import { Button, Form, Input, Spin, message } from "antd";
 import { useCallback, useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 const UpdateCategoryPage = () => {
   const [loading, setLoading] = useState(false);
+  const navigate = useNavigate();
   const [form] = Form.useForm();
   const params = useParams();
   const categoryId = params.id;
@@ -21,6 +22,7 @@ const UpdateCategoryPage = () => {
       });
       if (response.ok) {
         message.success("Kategori başarıyla güncellendi.");
+        navigate("/admin/categories");
       } else {
         message.error("Kategori güncellenirken bir hata oluştur");
       }

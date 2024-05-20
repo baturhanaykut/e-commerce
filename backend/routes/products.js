@@ -73,7 +73,7 @@ router.put("/:productId", async (req, res) => {
 
 router.delete("/:productId", async (req, res) => {
     try {
-        const productId = req.params.categoryId;
+        const productId = req.params.productId;
 
         const deletedProduct = await Product.findByIdAndDelete(productId);
 
